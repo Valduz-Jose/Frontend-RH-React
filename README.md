@@ -1,16 +1,70 @@
-# React + Vite
+# 🚀 Sistema de Gestión de Recursos Humanos - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el cliente web del **Sistema de RRHH**, una aplicación moderna desarrollada con **React** y **Vite**. Permite gestionar el ciclo de vida de los datos de empleados (CRUD) mediante una interfaz intuitiva y rápida.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Demo en Vivo
+Puedes ver la aplicación funcionando aquí:  
+🔗 **[https://frontend-rh-react.vercel.app](https://frontend-rh-react.vercel.app)**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Características
+- **Listado en tiempo real:** Visualización de empleados con datos obtenidos desde una API REST.
+- **Gestión Completa (CRUD):** - ➕ Registro de nuevos empleados.
+  - ✏️ Edición de datos existentes (Nombre, Departamento, Sueldo).
+  - 🗑️ Eliminación con confirmación de seguridad.
+- **Diseño Responsivo:** Interfaz adaptada a dispositivos móviles y escritorio gracias a **Bootstrap 5**.
+- **Formateo Automático:** Los sueldos se muestran y editan con formato de moneda local.
 
-## Expanding the ESLint configuration
+## 🛠️ Stack Tecnológico
+- **Core:** [React.js](https://reactjs.org/) (Hooks, Context, Router)
+- **Herramienta de Construcción:** [Vite](https://vitejs.dev/)
+- **Estilos:** [Bootstrap 5](https://getbootstrap.com/)
+- **Peticiones HTTP:** [Axios](https://axios-http.com/)
+- **Despliegue:** [Vercel](https://vercel.com/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Configuración del Proyecto
+
+### Requisitos previos
+- [Node.js](https://nodejs.org/) (versión 18 o superior)
+- [npm](https://www.npmjs.com/)
+
+### Instalación
+1. Clona el repositorio:
+   ```bash
+   git clone [https://github.com/tu-usuario/Frontend-RH-React.git](https://github.com/tu-usuario/Frontend-RH-React.git)
+   ```
+2. Instala las dependencias:
+
+```Bash
+npm install
+```
+
+3. Configura la URL del backend en src/config.js:
+
+```JavaScript
+export const urlBase = "[https://backend-rh-django.onrender.com/api/empleados](https://backend-rh-django.onrender.com/api/empleados)";
+```
+4. Ejecución
+Para iniciar el servidor de desarrollo:
+
+```Bash
+npm run dev
+```
+5. Para generar la versión de producción:
+
+```Bash
+npm run build
+```
+### 🏗️ Arquitectura del Sistema
+El frontend forma parte de un ecosistema Fullstack:
+
+Backend: Django (Render)
+
+Base de Datos: MySQL (Aiven Cloud)
+
+Frontend: React (Vercel)
+
+Desarrollado con ❤️ por Jose Alejandro Valduz Contreras
