@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios"; //cliente http para hacer solicitudes a la API
 import { NumericFormat } from "react-number-format"; // formatea números, especialmente para mostrar sueldos con formato de moneda
 import { urlBase } from "../config.js";
+import { Link } from "react-router-dom";
 
 export default function ListadoEmpleados() {
   //Estados de la aplicación
@@ -67,7 +68,12 @@ export default function ListadoEmpleados() {
                 />
               </td>
               <td>
-                <button className="btn btn-primary btn-sm me-2">Editar</button>
+                <Link
+                  to={`/editar/${empleado.idEmpleado}`}
+                  className="btn btn-primary btn-sm me-2"
+                >
+                  Editar
+                </Link>
                 <button className="btn btn-outline-danger btn-sm">
                   Eliminar
                 </button>
