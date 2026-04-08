@@ -33,8 +33,14 @@ export default function ListadoEmpleados() {
     );
 
   return (
-    <div className="container mt-4">
+    <div className="card">
+      <div className="card-header">
+        <strong>Empleados</strong>
+      </div>
       <table className="table table-striped table-hover mt-4 text-center">
+        {empleados.length === 0 ? (
+          <p className="text-secondary">No hay empleados registrados.</p>
+        ) : null}
         <thead className="table-dark">
           <tr>
             <th scope="col">ID</th>
@@ -61,8 +67,10 @@ export default function ListadoEmpleados() {
                 />
               </td>
               <td>
-                <button className="btn btn-warning btn-sm me-2">Editar</button>
-                <button className="btn btn-danger btn-sm">Eliminar</button>
+                <button className="btn btn-primary btn-sm me-2">Editar</button>
+                <button className="btn btn-outline-danger btn-sm">
+                  Eliminar
+                </button>
               </td>
             </tr>
           ))}
